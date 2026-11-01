@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
    WEDDING INVITATION - SCRIPT.JS
-   Aarav & Meera · 12 December 2026
+   Sachin & Sheetal · 12 December 2026
 ═══════════════════════════════════════════ */
 
 // ── Envelope / Seal open ────────────────────
@@ -368,5 +368,5 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => navObserver.observe(s));
 
-console.log('%c💍 Aarav & Meera · Wedding Invitation', 'font-size:16px;color:#c9a96e;font-family:serif;');
-console.log('%c12 December 2026 · Udaipur, Rajasthan', 'font-size:12px;color:#8a7060;');
+console.log('%c💍 Sachin & Sheetal · Wedding Invitation', 'font-size:16px;color:#c9a96e;font-family:serif;');
+console.log('%c11 December 2026 · Udaipur, Rajasthan', 'font-size:12px;color:#8a7060;');
