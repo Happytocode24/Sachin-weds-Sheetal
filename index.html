@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin &amp; Sheetal · Wedding Invitation</title>
+  <meta name="description"
+    content="You're invited to celebrate Sachin &amp; Sheetal, Friday, 12 December 2026, Udaipur, Rajasthan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Jost:wght@200;300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ENVELOPE / SEAL OVERLAY -->
+  <div id="envelope-overlay" class="envelope-overlay">
+    <div class="envelope-bg"></div>
+    <div class="envelope-content">
+      <p class="env-ganesh">॥ श्री गणेशाय नमः ॥</p>
+      <p class="env-invite-text">The wedding of</p>
+      <h1 class="env-names">Sachin <span class="env-weds">weds</span> Sheetal</h1>
+      <p class="env-location">Udaipur, Rajasthan · 12 December 2026</p>
+      <div class="env-seal" id="seal-btn" role="button" tabindex="0" aria-label="Tap to open invitation">
+        <div class="seal-ring"></div>
+        <div class="seal-inner">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" stroke="#c9a96e" stroke-width="1.5" />
+            <path d="M40 12 L43 34 L65 34 L48 47 L55 68 L40 55 L25 68 L32 47 L15 34 L37 34 Z" fill="#c9a96e"
+              opacity="0.6" />
+            <circle cx="40" cy="40" r="12" stroke="#c9a96e" stroke-width="1" />
+          </svg>
+          <span class="seal-text">Open</span>
+        </div>
+      </div>
+      <p class="env-hint">Tap the seal to enter</p>
+    </div>
+    <div class="petals-container" id="petals-container"></div>
+  </div>
+
+  <!-- MAIN INVITATION -->
+  <main id="main-invitation" class="main-invitation hidden">
+
+    <!-- NAV -->
+    <nav class="nav" id="main-nav">
+      <div class="nav-logo">A <span class="nav-amp">&amp;</span> M</div>
+      <div class="nav-links">
+        <a href="#countdown" id="nav-countdown">Save the Date</a>
+        <a href="#events" id="nav-events">Events</a>
+        <a href="#gallery" id="nav-gallery">Gallery</a>
+        <a href="#rsvp" id="nav-rsvp">RSVP</a>
+      </div>
+      <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <a href="#countdown" class="mobile-link">Save the Date</a>
+      <a href="#events" class="mobile-link">Events</a>
+      <a href="#gallery" class="mobile-link">Gallery</a>
+      <a href="#rsvp" class="mobile-link">RSVP</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-img"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-ganesh animate-fade-up">॥ श्री गणेशाय नमः ॥</p>
+        <p class="hero-families animate-fade-up delay-1">The Sharma families</p>
+        <p class="hero-invite animate-fade-up delay-2">
+          request the honour of your presence as we celebrate<br>the union of our children
+        </p>
+        <div class="hero-couple animate-fade-up delay-3">
+          <div class="hero-person">
+            <span class="hero-name-script">Sachin</span>
+            <span class="hero-name-full">Sachin Sharma</span>
+            <span class="hero-parents">Son of Mrs. Kavita Devi &amp; Retd. Sub Surender Kumar </span>
+          </div>
+          <div class="hero-divider">
+            <div class="divider-line"></div>
+            <span class="divider-symbol">&#10022;</span>
+            <div class="divider-line"></div>
+          </div>
+          <div class="hero-person">
+            <span class="hero-name-script">Sheetal</span>
+            <span class="hero-name-full">Sheetal Sharma</span>
+            <span class="hero-parents">Daughter of Mrs. Suman &amp; Mr. Vishnu Dutt Sharma</span>
+          </div>
+        </div>
+        <div class="hero-date animate-fade-up delay-4">
+          <span class="hero-date-text">Friday, 11 December 2026</span>
+          <span class="hero-dot">·</span>
+          <span class="hero-location-text">Bahadurgarh, Haryana</span>
+        </div>
+        <a href="#countdown" class="hero-scroll-cta animate-fade-up delay-5">
+          <span>View Invitation</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section" id="countdown">
+      <div class="section-floral-top">
+        <img src="images/floral_divider.png" alt="floral divider" class="floral-img" />
+      </div>
+      <div class="section-inner">
+        <p class="section-eyebrow">Save the date</p>
+        <h2 class="section-title">Until we say <em>"I do"</em></h2>
+        <div class="countdown-date-text">Friday, 11 December 2026 · Bahadurgarh, Haryana</div>
+        <div class="countdown-grid" id="countdown-grid">
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cd-days">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cd-hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cd-mins">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cd-secs">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+        <p class="countdown-sub">Counting down until we say "I do"</p>
+      </div>
+      <div class="section-floral-bottom">
+        <img src="images/floral_divider.png" alt="floral divider" class="floral-img floral-flip" />
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events-section" id="events">
+      <div class="section-inner">
+        <p class="section-eyebrow">The celebrations</p>
+        <h2 class="section-title">Wedding festivities</h2>
+        <div class="events-grid">
+
+          <div class="event-card" data-event="haldi">
+            <div class="event-number">01</div>
+            <div class="event-hindi">&#2361;&#2354;&#2381;&#2342;&#2368;</div>
+            <div class="event-icon">&#127804;</div>
+            <h3 class="event-name">Haldi</h3>
+            <div class="event-date-time">
+              <span>Friday, 11 December 2026</span>
+              <span>9:00 AM &ndash; 1:00 PM</span>
+            </div>
+            <div class="event-venue">The Courtyard, Jagmandir Palace</div>
+            <div class="event-address">Jag Mandir, Lake Pichola, Udaipur, Rajasthan 313001</div>
+            <div class="event-dress"><span class="dress-label">Dress:</span> Shades of yellow</div>
+            <div class="event-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=The%20Courtyard%2C%20Jagmandir%20Palace"
+                target="_blank" class="event-btn" id="haldi-directions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Directions
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haldi+Sachin+Sheetal&dates=20261211T043000Z/20261211T073000Z"
+                target="_blank" class="event-btn event-btn-outline" id="haldi-calendar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Save date
+              </a>
+            </div>
+          </div>
+
+          <div class="event-card" data-event="mehndi">
+            <div class="event-number">02</div>
+            <div class="event-hindi">&#2350;&#2375;&#2361;&#2306;&#2342;&#2368; &#2357;
+              &#2360;&#2306;&#2327;&#2368;&#2340;</div>
+            <div class="event-icon">&#127926;</div>
+            <h3 class="event-name">Mehndi &amp; Sangeet</h3>
+            <div class="event-date-time">
+              <span>Friday, 11 December 2026</span>
+              <span>6:30 PM &ndash; 10:00 PM</span>
+            </div>
+            <div class="event-venue">Zenana Mahal Lawns</div>
+            <div class="event-address">City Palace Complex, Udaipur, Rajasthan 313001</div>
+            <div class="event-dress"><span class="dress-label">Dress:</span> Festive greens &amp; pinks &middot; Dinner
+              and folk performances to follow</div>
+            <div class="event-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Zenana%20Mahal%20Lawns%2C%20City%20Palace%20Complex%2C%20Udaipur"
+                target="_blank" class="event-btn" id="mehndi-directions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Directions
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mehndi+Sangeet+Sachin+Sheetal&dates=20261211T130000Z/20261211T160000Z"
+                target="_blank" class="event-btn event-btn-outline" id="mehndi-calendar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Save date
+              </a>
+            </div>
+          </div>
+
+          <div class="event-card" data-event="baraat">
+            <div class="event-number">03</div>
+            <div class="event-hindi">&#2348;&#2366;&#2352;&#2366;&#2340;</div>
+            <div class="event-icon">&#127970;</div>
+            <h3 class="event-name">Baraat</h3>
+            <div class="event-date-time">
+              <span>Friday, 12 December 2026</span>
+              <span>5:00 PM &ndash; 8:00 PM</span>
+            </div>
+            <div class="event-venue">Gangaur Ghat</div>
+            <div class="event-address">Gangaur Ghat, Udaipur, Rajasthan 313001</div>
+            <div class="event-dress"><span class="dress-label">Dress:</span> Safas will be provided</div>
+            <div class="event-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Gangaur+Ghat+Udaipur" target="_blank"
+                class="event-btn" id="baraat-directions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Directions
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Baraat+Sachin+Sheetal&dates=20261212T113000Z/20261212T143000Z"
+                target="_blank" class="event-btn event-btn-outline" id="baraat-calendar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Save date
+              </a>
+            </div>
+          </div>
+
+          <div class="event-card" data-event="pheras">
+            <div class="event-number">04</div>
+            <div class="event-hindi">&#2347;&#2375;&#2352;&#2375;</div>
+            <div class="event-icon">&#128293;</div>
+            <h3 class="event-name">Pheras</h3>
+            <div class="event-date-time">
+              <span>Friday, 12 December 2026</span>
+              <span>Shubh muhurat at 8:14 PM</span>
+            </div>
+            <div class="event-venue">Manek Chowk, City Palace</div>
+            <div class="event-address">City Palace Complex, Udaipur, Rajasthan 313001</div>
+            <div class="event-dress"><span class="dress-label">Note:</span> Traditional Indian attire</div>
+            <div class="event-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Manek+Chowk+City+Palace+Udaipur" target="_blank"
+                class="event-btn" id="pheras-directions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Directions
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pheras+Sachin+Sheetal&dates=20261212T140000Z/20261212T170000Z"
+                target="_blank" class="event-btn event-btn-outline" id="pheras-calendar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Save date
+              </a>
+            </div>
+          </div>
+
+          <div class="event-card" data-event="reception">
+            <div class="event-number">05</div>
+            <div class="event-hindi">&#2360;&#2381;&#2357;&#2366;&#2327;&#2340;
+              &#2360;&#2350;&#2366;&#2352;&#2379;&#2361;</div>
+            <div class="event-icon">&#10024;</div>
+            <h3 class="event-name">Reception</h3>
+            <div class="event-date-time">
+              <span>Sunday, 13 December 2026</span>
+              <span>8:00 PM &ndash; 11:30 PM</span>
+            </div>
+            <div class="event-venue">Durbar Hall, Fateh Prakash</div>
+            <div class="event-address">City Palace Complex, Udaipur, Rajasthan 313001</div>
+            <div class="event-dress"><span class="dress-label">Dress:</span> Black tie / Indian formal</div>
+            <div class="event-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Durbar+Hall+Fateh+Prakash+Udaipur"
+                target="_blank" class="event-btn" id="reception-directions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Directions
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Reception+Sachin+Sheetal&dates=20261213T143000Z/20261213T173000Z"
+                target="_blank" class="event-btn event-btn-outline" id="reception-calendar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Save date
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-inner">
+        <p class="section-eyebrow">Our moments</p>
+        <h2 class="section-title">Before the big day</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--tall" data-index="0" role="button" tabindex="0" id="gallery-item-1">
+            <img src="images/couple1.png" alt="Couple at palace archway at sunset" loading="lazy" />
+            <div class="gallery-item-overlay"><span>&#10516;</span></div>
+          </div>
+          <div class="gallery-item" data-index="1" role="button" tabindex="0" id="gallery-item-2">
+            <img src="images/couple2.png" alt="Couple on boat at Lake Pichola" loading="lazy" />
+            <div class="gallery-item-overlay"><span>&#10516;</span></div>
+          </div>
+          <div class="gallery-item" data-index="2" role="button" tabindex="0" id="gallery-item-3">
+            <img src="images/couple3.png" alt="Couple in palace courtyard" loading="lazy" />
+            <div class="gallery-item-overlay"><span>&#10516;</span></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-index="3" role="button" tabindex="0" id="gallery-item-4">
+            <img src="images/hero_bg.png" alt="Udaipur palace at golden hour" loading="lazy" />
+            <div class="gallery-item-overlay"><span>&#10516;</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true">
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&#215;</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img" />
+      </div>
+    </div>
+
+    <!-- RSVP -->
+    <section class="rsvp-section" id="rsvp">
+      <div class="section-floral-top">
+        <img src="images/floral_divider.png" alt="floral divider" class="floral-img" />
+      </div>
+      <div class="section-inner">
+        <p class="section-eyebrow">RSVP</p>
+        <h2 class="section-title">Will you join us?</h2>
+        <p class="rsvp-deadline">Kindly reply by <strong>20 November 2026</strong></p>
+        <p class="rsvp-subtitle">Your presence is the greatest blessing we could ask for.</p>
+
+        <form class="rsvp-form" id="rsvp-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guest-name">Your Name</label>
+              <input type="text" id="guest-name" name="guest-name" placeholder="Full name" required />
+            </div>
+            <div class="form-group">
+              <label for="guest-phone">Phone / WhatsApp</label>
+              <input type="tel" id="guest-phone" name="guest-phone" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Which events will you attend?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label" for="chk-haldi">
+                <input type="checkbox" id="chk-haldi" name="events" value="Haldi" />
+                <span class="checkmark"></span> Haldi
+              </label>
+              <label class="checkbox-label" for="chk-mehndi">
+                <input type="checkbox" id="chk-mehndi" name="events" value="Mehndi" />
+                <span class="checkmark"></span> Mehndi &amp; Sangeet
+              </label>
+              <label class="checkbox-label" for="chk-baraat">
+                <input type="checkbox" id="chk-baraat" name="events" value="Baraat" />
+                <span class="checkmark"></span> Baraat
+              </label>
+              <label class="checkbox-label" for="chk-pheras">
+                <input type="checkbox" id="chk-pheras" name="events" value="Pheras" />
+                <span class="checkmark"></span> Pheras
+              </label>
+              <label class="checkbox-label" for="chk-reception">
+                <input type="checkbox" id="chk-reception" name="events" value="Reception" />
+                <span class="checkmark"></span> Reception
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="guest-count">Number of guests (including yourself)</label>
+            <select id="guest-count" name="guest-count">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5+">5+ guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guest-message">A message for the couple</label>
+            <textarea id="guest-message" name="guest-message" rows="4"
+              placeholder="Write your wishes here&hellip;"></textarea>
+          </div>
+          <button type="submit" class="rsvp-submit" id="rsvp-submit">
+            <span id="rsvp-submit-text">Send with love &#128140;</span>
+          </button>
+        </form>
+
+        <div class="rsvp-success hidden" id="rsvp-success">
+          <div class="success-icon">&#127882;</div>
+          <h3>Thank you!</h3>
+          <p>Your RSVP has been received. We can't wait to celebrate with you!</p>
+        </div>
+
+        <div class="guestbook" id="guestbook">
+          <h3 class="guestbook-title">Wishes &amp; blessings</h3>
+          <div class="guestbook-list" id="guestbook-list">
+            <div class="guestbook-item">
+              <div class="guestbook-avatar">P</div>
+              <div class="guestbook-body">
+                <strong>Priya &amp; Rohan Sharma</strong>
+                <p>Wishing you both a lifetime of love, laughter, and beautiful memories! Can't wait to celebrate in
+                  Udaipur &#127800;</p>
+              </div>
+            </div>
+            <div class="guestbook-item">
+              <div class="guestbook-avatar">A</div>
+              <div class="guestbook-body">
+                <strong>Anita Maasi</strong>
+                <p>My blessings are always with you both. May God shower you with all his love and grace.
+                  &#10084;&#65039;</p>
+              </div>
+            </div>
+            <div class="guestbook-item">
+              <div class="guestbook-avatar">K</div>
+              <div class="guestbook-body">
+                <strong>Karan &amp; Nisha</strong>
+                <p>So excited for you both! Udaipur is going to be absolutely stunning. #SachinKiSheetal forever!
+                  &#127881;&#10024;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-floral-bottom">
+        <img src="images/floral_divider.png" alt="floral divider" class="floral-img floral-flip" />
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-names">Sachin <span class="footer-amp">&amp;</span> Sheetal</p>
+        <p class="footer-date">Friday, 12 December 2026 &middot; Udaipur, Rajasthan</p>
+        <p class="footer-hashtag">#SachinkiSheetal</p>
+        <div class="footer-families">With love &middot; The Sharma families</div>
+        <div class="footer-divider"></div>
+        <a href="https://aavjoo.in" target="_blank" class="footer-credit">Crafted by Aavjoo</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Floating Music Player -->
+  <div class="music-player hidden" id="music-player">
+    <button class="music-btn" id="music-btn" aria-label="Toggle background music">
+      <svg id="music-icon" class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </svg>
+      <div class="music-bars hidden" id="music-bars">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+    <span class="music-label">Music</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
